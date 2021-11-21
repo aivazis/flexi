@@ -12,6 +12,7 @@ export Status from './status'
 export Main from './main'
 
 // sandboxes
+export { Flexi } from './flexi'
 export { GiQL } from './graphiql'
 
 // not yet implemented
