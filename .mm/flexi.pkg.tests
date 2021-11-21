@@ -1,0 +1,13 @@
+# -*- makefile -*-
+#
+# michael a.g. aïvázis <michael.aivazis@para-sim.com>
+# (c) 1998-2021 all rights reserved
+
+
+# the testsuite for the flexi package
+flexi.pkg.tests.stem := flexi.pkg
+# depends on
+flexi.pkg.tests.prerequisites := flexi.pkg
+
+
+# end of file
