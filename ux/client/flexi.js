@@ -26,6 +26,8 @@ import {
     GiQL,
     // the main page
     Main,
+    // the flex sandbox
+    Flexi,
     // boilerplate
     Loading, NYI, Stop,
 } from '~/views'
@@ -41,25 +43,25 @@ const FlexiApp = () => {
     // render
     return (
         <Routes >
-            {/* the app */ }
+            {/* the app */}
             <Route path="/" element={<Main />} >
-                {/* specific activities */ }
-                <Route path="experiment" element={<NYI />} />
+                {/* specific activities */}
+                <Route path="experiment" element={<Flexi />} />
                 <Route path="help" element={<NYI />} />
                 <Route path="about" element={<NYI />} />
 
-                {/* the default page */ }
-                <Route index element={<NYI />} />
+                {/* the default page */}
+                <Route index element={<Flexi />} />
             </Route>
 
-            {/* meta navigation */ }
-            {/* the closing page */ }
+            {/* meta navigation */}
+            {/* the closing page */}
             <Route path="/stop" element={<Stop />} />
-            {/* the page to render while waiting for data to arrive */ }
+            {/* the page to render while waiting for data to arrive */}
             <Route path="/loading" element={<Loading />} />
 
 
-            {/* the graphiql sandbox */ }
+            {/* the graphiql sandbox */}
             <Route path="/graphiql" element={<GiQL />} />
         </Routes>
     )
@@ -69,12 +71,12 @@ const FlexiApp = () => {
 // the outer component that sets up access to the {relay}, {suspense},
 // and {router} environments
 const Root = () => (
-    <RelayEnvironmentProvider environment={ environment }>
+    <RelayEnvironmentProvider environment={environment}>
         <Suspense fallback={< Loading />}>
             <Router>
                 <FlexiApp />
             </Router>
-    </Suspense>
+        </Suspense>
     </RelayEnvironmentProvider >
 )
 
