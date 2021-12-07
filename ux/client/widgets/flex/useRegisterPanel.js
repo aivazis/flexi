@@ -22,7 +22,7 @@ export default ({ ref = null, min = 0, max = Infinity, auto = false }) => {
     // after the initial mount
     React.useEffect(() => {
         // register the panel
-        addPanel({ ref: panel, min, max, false })
+        addPanel({ ref: panel, min, max, auto })
     }, [])
 
     // build and return the context relevant to this panel
