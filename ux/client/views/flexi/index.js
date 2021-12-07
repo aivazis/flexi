@@ -57,7 +57,7 @@ export const Flexi = () => {
                     <Item>panel 0</Item >
                 </Flex.Panel>
 
-                <Flex.Panel min={90} max={Infinity} style={styles.flex} >
+                <Flex.Panel min={90} max={Infinity} auto={true} style={styles.flex} >
                     <Item>panel 1</Item>
                 </Flex.Panel>
 
@@ -72,7 +72,7 @@ export const Flexi = () => {
                             <Item>panel B</Item>
                         </Flex.Panel>
 
-                        <Flex.Panel min={100} max={Infinity} style={styles.flex} >
+                        <Flex.Panel min={100} max={Infinity} auto={true} style={styles.flex} >
                             <Item>panel C</Item>
                         </Flex.Panel>
 
