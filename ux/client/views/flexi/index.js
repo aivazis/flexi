@@ -83,7 +83,7 @@ export const Flexi = () => {
                     <Item>panel 2</Item>
                 </Flex.Panel>
 
-                <Flex.Panel min={180} max={Infinity} style={styles.flex} >
+                <Flex.Panel min={180} max={Infinity} auto={true} style={styles.flex} >
                     <Item>panel 3</Item>
                 </Flex.Panel>
 
