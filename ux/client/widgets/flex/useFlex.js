@@ -85,10 +85,10 @@ export default () => {
             // punt; the proposed size change cannot be accommodated
             return
         }
+
         // otherwise, update the sizes of every panel that flexes
         resize(updates)
-
-        // record the new state
+        // and record the new reference location
         setSeparatorLocation({ x, y })
 
         // all done
@@ -109,7 +109,7 @@ export default () => {
             (delta > 0)
                 // on stretch : no more than {maxSize} permits
                 ? Math.min(delta, max - extent)
-                // on shrink: no less that {minSize} permit
+                // on shrink: no less that {minSize} permits
                 : Math.max(delta, min - extent))
         // all done
         return allowed
