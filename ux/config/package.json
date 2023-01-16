@@ -1,6 +1,6 @@
 {
     "name": "flexi",
-    "version": "0.0.1",
+    "version": "0.3.0",
     "description": "flexi embedded ux",
     "license": "BSD-2-Clause",
     "repository": "https://github.com/aivazis/flexi",
@@ -8,7 +8,12 @@
     "scripts": {
         "build": "webpack --mode development",
         "dev": "webpack --mode development",
-        "relay": "relay-compiler --src ./client --schema ./schema/flexi.gql"
+        "relay": "relay-compiler"
+    },
+    "relay": {
+        "src": "./client",
+        "schema": "./schema/flexi.gql",
+        "language": "javascript"
     },
     "devDependencies": {
         "@babel/core": "latest",
@@ -19,6 +24,8 @@
         "babel-plugin-relay": "latest",
         "html-webpack-plugin": "latest",
         "relay-compiler": "latest",
+        "ts-loader": "latest",
+        "typescript": "latest",
         "webpack": "latest",
         "webpack-cli": "latest"
     },
